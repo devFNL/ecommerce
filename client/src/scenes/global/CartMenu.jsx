@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const FlexBox = styled(Box)`
   display: flex;
-  justfiy-content: space-between;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -30,34 +30,34 @@ const CartMenu = () => {
   }, 0);
 
   return (
-    <Box // overlay
+    <Box
       display={isCartOpen ? "block" : "none"}
-      backgroundColor="rgba(0,0,0,0.4)"
-      position={"fixed"}
+      backgroundColor="rgba(0, 0, 0, 0.4)"
+      position="fixed"
       zIndex={10}
-      width={"100%"}
-      height={"100"}
-      left={"0"}
-      top={"0"}
-      overflow={"auto"}
+      width="100%"
+      height="100%"
+      left="0"
+      top="0"
+      overflow="auto"
     >
-      {/* MODAL */}
       <Box
-        position={"fixed"}
-        right={"0"}
-        bottom={"0"}
-        width={"max(400px, 30%)"}
-        height={"100%"}
+        position="fixed"
+        right="0"
+        bottom="0"
+        width="max(400px, 30%)"
+        height="100%"
         backgroundColor="white"
       >
-        <Box padding={"30px"} overflow={"auto"} height={"100%"}>
+        <Box padding="30px" overflow="auto" height="100%">
           {/* HEADER */}
-          <FlexBox mb={"15px"}>
+          <FlexBox mb="15px">
             <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
               <CloseIcon />
             </IconButton>
           </FlexBox>
+
           {/* CART LIST */}
           <Box>
             {cart.map((item) => (
@@ -66,15 +66,14 @@ const CartMenu = () => {
                   <Box flex="1 1 40%">
                     <img
                       alt={item?.name}
-                      width={"123px"}
-                      height={"164px"}
+                      width="123px"
+                      height="164px"
                       src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                     />
                   </Box>
                   <Box flex="1 1 60%">
-                    {/* ITEM NAME */}
-                    <FlexBox mb={"5px"}>
-                      <Typography fontWeight={"bold"}>
+                    <FlexBox mb="5px">
+                      <Typography fontWeight="bold">
                         {item.attributes.name}
                       </Typography>
                       <IconButton
@@ -90,7 +89,7 @@ const CartMenu = () => {
                     <FlexBox m="15px 0">
                       <Box
                         display="flex"
-                        alignItems={"center"}
+                        alignItems="center"
                         border={`1.5px solid ${shades.neutral[500]}`}
                       >
                         <IconButton
@@ -109,12 +108,11 @@ const CartMenu = () => {
                           <AddIcon />
                         </IconButton>
                       </Box>
+                      {/* PRICE */}
+                      <Typography fontWeight="bold">
+                        ${item.attributes.price}
+                      </Typography>
                     </FlexBox>
-
-                    {/* PRICE */}
-                    <Typography fontWeight={"bold"}>
-                      ${item.attributes.price}
-                    </Typography>
                   </Box>
                 </FlexBox>
                 <Divider />
@@ -123,7 +121,28 @@ const CartMenu = () => {
           </Box>
 
           {/* ACTIONS */}
-          <Box></Box>
+          <Box m="20px 0">
+            <FlexBox m="20px 0">
+              <Typography fontWeight="bold">SUBTOTAL</Typography>
+              <Typography fontWeight="bold">${totalPrice}</Typography>
+            </FlexBox>
+            <Button
+              sx={{
+                backgroundColor: shades.primary[400],
+                color: "white",
+                borderRadius: 0,
+                minWidth: "100%",
+                padding: "20px 40px",
+                m: "20px 0",
+              }}
+              onClick={() => {
+                navigate("/checkout");
+                dispatch(setIsCartOpen({}));
+              }}
+            >
+              CHECKOUT
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Box>

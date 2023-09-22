@@ -5,6 +5,10 @@ import { useState } from "react";
 const Subscribe = () => {
   const [email, setEmail] = useState("");
 
+  const handleSubscribeClick = () => {
+    console.log("Subscripción realizada");
+  };
+
   return (
     <Box width="80%" margin="80px auto" textAlign="center">
       <IconButton>
@@ -32,7 +36,13 @@ const Subscribe = () => {
           value={email}
         />
         <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-        <Typography sx={{ p: "10px", ":hover": { cursor: "pointer" } }}>
+        <Typography
+          sx={{
+            p: "10px",
+            cursor: "pointer",
+          }}
+          onClick={handleSubscribeClick} // Agregar onClick aquí
+        >
           Subscribe
         </Typography>
       </Box>

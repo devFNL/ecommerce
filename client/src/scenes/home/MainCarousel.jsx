@@ -4,11 +4,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { shades } from "../../theme";
-import img1 from "../../assets/brooke-cagle-aVT8VkmzML4-unsplash.jpeg";
-import img2 from "../../assets/chris-ghinda-wK2ESlRRZQ8-unsplash.jpeg";
-import img3 from "../../assets/jc-gellidon-JM8TkWJ9UIY-unsplash.jpeg";
-import img4 from "../../assets/larm-rmah-R1Ku62Z7zqE-unsplash.jpeg";
-import img5 from "../../assets/toa-heftiba-dti56waifB4-unsplash.jpeg";
+import img1 from "../../assets/mike-von-wINYGcOk-Ps-unsplash.jpg";
+import img2 from "../../assets/matthew-fassnacht--23df3bIea4-unsplash.jpg";
+import img3 from "../../assets/daniel-monteiro-xl8uTY0s49A-unsplash.jpg";
+import img4 from "../../assets/linoleum-creative-collective-pVmUlny3llI-unsplash.jpg";
+import img5 from "../../assets/daniel-adesina-kDyhmfvXFqE-unsplash.jpg";
 
 // import img bundle with regex
 // const importAll = (r) =>
@@ -22,11 +22,11 @@ import img5 from "../../assets/toa-heftiba-dti56waifB4-unsplash.jpeg";
 // );
 
 export const heroTextureImports = {
-  "brooke-cagle-aVT8VkmzML4-unsplash.jpeg": img1,
-  "chris-ghinda-wK2ESlRRZQ8-unsplash.jpeg": img2,
-  "jc-gellidon-JM8TkWJ9UIY-unsplash.jpeg": img3,
-  "larm-rmah-R1Ku62Z7zqE-unsplash.jpeg": img4,
-  "toa-heftiba-dti56waifB4-unsplash.jpeg": img5,
+  "mike-von-wINYGcOk-Ps-unsplash.jpg": img1,
+  "matthew-fassnacht--23df3bIea4-unsplash.jpg": img2,
+  "daniel-monteiro-xl8uTY0s49A-unsplash.jpg": img3,
+  "linoleum-creative-collective-pVmUlny3llI-unsplash.jpg": img4,
+  "daniel-adesina-kDyhmfvXFqE-unsplash.jpg": img5,
 };
 
 const MainCarousel = () => {

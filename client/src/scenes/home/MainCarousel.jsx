@@ -5,10 +5,10 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { shades } from "../../theme";
 import img1 from "../../assets/mike-von-wINYGcOk-Ps-unsplash.jpg";
-import img2 from "../../assets/matthew-fassnacht--23df3bIea4-unsplash.jpg";
-import img3 from "../../assets/daniel-monteiro-xl8uTY0s49A-unsplash.jpg";
-import img4 from "../../assets/linoleum-creative-collective-pVmUlny3llI-unsplash.jpg";
-import img5 from "../../assets/daniel-adesina-kDyhmfvXFqE-unsplash.jpg";
+import img2 from "../../assets/bmx22c-VZdnHy9XpJ4-unsplash.jpg";
+import img3 from "../../assets/joshua-rawson-harris-Qaj-UT2FH4Q-unsplash.jpg";
+import img4 from "../../assets/daniel-adesina-kDyhmfvXFqE-unsplash.jpg";
+import img5 from "../../assets/marita-kavelashvili-Mvj8fv4URek-unsplash.jpg";
 
 // import img bundle with regex
 // const importAll = (r) =>
@@ -23,10 +23,10 @@ import img5 from "../../assets/daniel-adesina-kDyhmfvXFqE-unsplash.jpg";
 
 export const heroTextureImports = {
   "mike-von-wINYGcOk-Ps-unsplash.jpg": img1,
-  "matthew-fassnacht--23df3bIea4-unsplash.jpg": img2,
-  "daniel-monteiro-xl8uTY0s49A-unsplash.jpg": img3,
-  "linoleum-creative-collective-pVmUlny3llI-unsplash.jpg": img4,
-  "daniel-adesina-kDyhmfvXFqE-unsplash.jpg": img5,
+  "bmx22c-VZdnHy9XpJ4-unsplash.jpg": img2,
+  "joshua-rawson-harris-Qaj-UT2FH4Q-unsplash.jpg": img3,
+  "daniel-adesina-kDyhmfvXFqE-unsplash.jpg": img4,
+  "marita-kavelashvili-Mvj8fv4URek-unsplash.jpg": img5,
 };
 
 const MainCarousel = () => {

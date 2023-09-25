@@ -17,7 +17,7 @@ const ShoppingList = () => {
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
+      `${import.meta.env.VITE_BACKEND_HREF}/api/items?populate=image`,
       { method: "GET" }
     );
 

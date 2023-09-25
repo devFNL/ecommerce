@@ -38,8 +38,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         payment_method_types: ["card"],
         customer_email: email,
         mode: "payment",
-        success_url: "http://localhost:5173/checkout/success",
-        cancel_url: "http://localhost:5173",
+        success_url: "https://ecommercefnlclient.onrender.com/checkout/success",
+        cancel_url: "https://ecommercefnlclient.onrender.com/",
         line_items: lineItems,
       });
 

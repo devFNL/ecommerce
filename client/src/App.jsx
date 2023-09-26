@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <Navbar />
           <ScrollToTop />
           <Routes>

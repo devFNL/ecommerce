@@ -1,8 +1,8 @@
 # E-commerce.
-A modern and stylish e-commerce platform specializing in urban clothing, . It's built using a stack of cutting-edge technologies, including React, Redux, Tailwind CSS, Material-UI, Strapi, Stripe, Formik, and Yup. UrbanWear offers a sleek and minimalist design with a wide range of features to enhance the shopping experience.
+A modern and stylish e-commerce platform specializing in urban clothing, . It's built using a stack of cutting-edge technologies, including React, Redux, Tailwind CSS, Material-UI, Strapi, Stripe, Formik, and Yup. This site offers a sleek and minimalist design with a wide range of features to enhance the shopping experience.
 
 ## Features
-- **Modern Design:** UrbanWear boasts a modern, minimalist, and stylish design that resonates with urban fashion trends. </br>
+- **Modern Design:** the site boasts a modern, minimalist, and stylish design that resonates with urban fashion trends. </br>
 - **Category Filtering:** Easily browse and filter clothing items by various categories, making it simple to find your style. </br>
 - **Shopping Cart:** Build your shopping cart with your favorite items for a seamless shopping experience. </br>
 - **Checkout:** Complete your purchase by filling out intuitive forms and secure payment processing powered by Stripe. </br>
@@ -24,4 +24,14 @@ A modern and stylish e-commerce platform specializing in urban clothing, . It's 
 
 
 ## Screenshots 
-incoming.
+
+![Mesa de trabajo 1](https://github.com/devFNL/ecommerce/assets/127357394/4ea98292-dedb-46ae-81ba-a56f58e69524)
+![Mesa de trabajo 2](https://github.com/devFNL/ecommerce/assets/127357394/da9e548a-b386-4b66-8733-906dc0cf903a)
+![Mesa de trabajo 3](https://github.com/devFNL/ecommerce/assets/127357394/cf87afd4-3018-4382-8e42-15f89f04e7d2)
+![Mesa de trabajo 4](https://github.com/devFNL/ecommerce/assets/127357394/c9ad2c43-f8e0-4eb1-aaf6-4a56924e6ee5)
+![Mesa de trabajo 5](https://github.com/devFNL/ecommerce/assets/127357394/5fb523e3-6716-4e73-8212-c8a2e5aebd0d)
+![Mesa de trabajo 6](https://github.com/devFNL/ecommerce/assets/127357394/d203bc0b-dad5-4aed-ab6a-db8910d7064d)
+
+
+
+

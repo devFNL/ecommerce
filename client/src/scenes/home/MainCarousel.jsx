@@ -37,6 +37,8 @@ const MainCarousel = () => {
       showThumbs={false}
       showIndicators={false}
       showStatus={false}
+      autoPlay={true}
+      interval={3000}
       renderArrowPrev={(onClickHandler, hasPrev, label) => (
         <IconButton
           onClick={onClickHandler}
@@ -93,14 +95,21 @@ const MainCarousel = () => {
             margin={isNonMobile ? undefined : "0 auto"}
             maxWidth={isNonMobile ? undefined : "240px"}
           >
-            <Typography color={shades.secondary[200]}>-- NEW ITEMS</Typography>
-            <Typography variant="h1">Summer Sale</Typography>
+            <Typography
+              color={shades.secondary[200]}
+              sx={{ userSelect: "none" }}
+            >
+              -- NEW ITEMS
+            </Typography>
+            <Typography variant="h1" sx={{ userSelect: "none" }}>
+              Summer Sale
+            </Typography>
             <Typography
               fontWeight="bold"
               color={shades.secondary[300]}
               sx={{ textDecoration: "underline" }}
             >
-              Discover More
+              <a href="#featured">Discover More</a>
             </Typography>
           </Box>
         </Box>

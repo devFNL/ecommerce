@@ -1,14 +1,19 @@
 import { Box, InputBase, Divider, Typography, IconButton } from "@mui/material";
 import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined";
 import { useState } from "react";
+import CustomDialog from "../global/CustomDialog";
 
 const Subscribe = () => {
   const [email, setEmail] = useState("");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleSubscribeClick = () => {
-    console.log("Subscripción realizada");
+    setIsDialogOpen(true);
   };
 
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+  };
   return (
     <Box width="80%" margin="80px auto" textAlign="center">
       <IconButton>
@@ -41,11 +46,17 @@ const Subscribe = () => {
             p: "10px",
             cursor: "pointer",
           }}
-          onClick={handleSubscribeClick} // Agregar onClick aquí
+          onClick={handleSubscribeClick}
         >
           Subscribe
         </Typography>
       </Box>
+      <CustomDialog
+        open={isDialogOpen}
+        onClose={handleCloseDialog}
+        title="Subscription Successful"
+        content="Thank you for subscribing to our newsletter. You will receive a $20 coupon in your email shortly."
+      />
     </Box>
   );
 };

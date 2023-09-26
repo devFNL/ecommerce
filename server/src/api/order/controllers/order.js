@@ -39,7 +39,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         customer_email: email,
         mode: "payment",
         success_url: "https://ecommercefnlclient.onrender.com/checkout/success",
-        cancel_url: "https://ecommercefnlclient.onrender.com/",
+        cancel_url: "https://ecommercefnlclient.onrender.com/checkout/failed",
         line_items: lineItems,
       });
 

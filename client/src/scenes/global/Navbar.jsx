@@ -37,10 +37,12 @@ const Navbar = () => {
       >
         <Box
           onClick={() => navigate("/")}
-          sx={{ "&:hover": { cursor: "pointer" } }}
+          sx={{ "&:hover": { cursor: "pointer" }, userSelect: "none" }}
           color={shades.secondary[500]}
         >
-          E-COMMERCE
+          <a href="#" style={{ color: "inherit" }}>
+            URBANIZ-E
+          </a>
         </Box>
         <Box
           display={"flex"}
@@ -49,11 +51,15 @@ const Navbar = () => {
           zIndex={"2"}
         >
           <IconButton sx={{ color: "black" }}>
-            <SearchOutlined />
+            <a href="#featured" style={{ color: "inherit" }}>
+              <SearchOutlined />
+            </a>
           </IconButton>
-          <IconButton sx={{ color: "black" }}>
-            <PersonOutline />
-          </IconButton>
+          {/* <IconButton sx={{ color: "black" }}>
+            <a>
+              <PersonOutline />
+            </a>
+          </IconButton> */}
           <Badge
             badgeContent={cart.length}
             color={"secondary"}
@@ -72,12 +78,14 @@ const Navbar = () => {
               onClick={() => dispatch(setIsCartOpen({}))}
               sx={{ color: "black" }}
             >
-              <ShoppingBagOutlined />
+              <a>
+                <ShoppingBagOutlined />
+              </a>
             </IconButton>
           </Badge>
-          <IconButton sx={{ color: "black" }}>
+          {/* <IconButton sx={{ color: "black" }}>
             <MenuOutlined />
-          </IconButton>
+          </IconButton> */}
         </Box>
       </Box>
     </Box>

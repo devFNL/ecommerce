@@ -16,6 +16,8 @@ const ItemDetails = () => {
   const [count, setCount] = useState(1);
   const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
+  const [isInWishlist, setIsInWishlist] = useState(false);
+  const [relatedProducts, setRelatedProducts] = useState([]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -48,7 +50,6 @@ const ItemDetails = () => {
   return (
     <Box width="80%" m="80px auto">
       <Box display="flex" flexWrap="wrap" columnGap="40px">
-        {/* IMAGES */}
         <Box flex="1 1 40%" mb="40px">
           <img
             alt={item?.name}
@@ -60,11 +61,9 @@ const ItemDetails = () => {
             style={{ objectFit: "contain" }}
           />
         </Box>
-        {/* ACTIONS */}
         <Box flex="1 1 50%" mb="40px">
           <Box display="flex" justifyContent="space-between">
             <Box>Home/Item</Box>
-            <Box>Prev Next</Box>
           </Box>
 
           <Box m="65px 0 25px 0">
@@ -75,7 +74,6 @@ const ItemDetails = () => {
             </Typography>
           </Box>
 
-          {/* COUNT AND BUTTON */}
           <Box display="flex" alignItems="center" minHeight="50px">
             <Box
               display="flex"
@@ -107,15 +105,26 @@ const ItemDetails = () => {
             </Button>
           </Box>
           <Box>
-            <Box m="20px 0 5px 0" display="flex">
-              <FavoriteBorderOutlinedIcon />
-              <Typography sx={{ ml: "5px" }}>ADD TO WHISHLIST</Typography>
+            <Box
+              m="20px 0 5px 0"
+              display="flex"
+              onClick={() => setIsInWishlist(!isInWishlist)}
+            >
+              {isInWishlist ? (
+                <FavoriteBorderOutlinedIcon style={{ color: "red" }} />
+              ) : (
+                <FavoriteBorderOutlinedIcon />
+              )}
+              <Typography sx={{ ml: "5px", cursor: "pointer" }}>
+                ADD TO WHISHLIST
+              </Typography>
             </Box>
-            <Typography>CATEGOIES: {item?.attributes?.category}</Typography>
+            <Typography sx={{ pt: "10px" }}>
+              CATEGORY: {item?.attributes?.category}
+            </Typography>
           </Box>
         </Box>
       </Box>
-      {/* INFORMATION */}
       <Box m="20px 0">
         <Tabs value={value} onChange={handleChange}>
           <Tab tabel="DESCRIPTION" value="description" />
@@ -128,7 +137,6 @@ const ItemDetails = () => {
         )}
         {value === "reviews" && <div>reviews</div>}
       </Box>
-      {/* RELATED ITEMS */}
 
       <Box mt="50px" width="100%">
         <Typography varitant="h3" fontWeight="bold">
@@ -141,8 +149,7 @@ const ItemDetails = () => {
           columnGap="1.33%"
           justifyContent="space-between"
         >
-          {" "}
-          {items.slice(0, 4).map((item, i) => (
+          {items.slice(0, 6).map((item, i) => (
             <Item key={`${item.name}}-${i}`} item={item} />
           ))}
         </Box>

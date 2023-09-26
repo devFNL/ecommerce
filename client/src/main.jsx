@@ -13,9 +13,6 @@ const store = configureStore({
   reducer: { cart: cartReducer },
 });
 
-// npm run develop
-// para strapi
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>

@@ -9,7 +9,6 @@ const ShoppingList = () => {
   const [value, setValue] = useState("all");
   const items = useSelector((state) => state.cart.items);
   const isNonMobile = useMediaQuery("(min-width:600px)");
-  console.log("items", items);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -41,7 +40,12 @@ const ShoppingList = () => {
 
   return (
     <Box width="80%" margin="80px auto">
-      <Typography variant="h3" textAlign="center">
+      <Typography
+        variant="h3"
+        textAlign="center"
+        sx={{ userSelect: "none" }}
+        id="featured"
+      >
         Our Featured <b>Products</b>
       </Typography>
       <Tabs

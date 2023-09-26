@@ -51,15 +51,15 @@ const Navbar = () => {
           zIndex={"2"}
         >
           <IconButton sx={{ color: "black" }}>
-            <a href="#featured" style={{ color: "inherit" }}>
+            <a>
               <SearchOutlined />
             </a>
           </IconButton>
-          {/* <IconButton sx={{ color: "black" }}>
+          <IconButton sx={{ color: "black" }}>
             <a>
               <PersonOutline />
             </a>
-          </IconButton> */}
+          </IconButton>
           <Badge
             badgeContent={cart.length}
             color={"secondary"}

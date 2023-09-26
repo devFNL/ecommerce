@@ -33,6 +33,7 @@ const Footer = () => {
             fontWeight="bold"
             mb="30px"
             color={shades.secondary[500]}
+            sx={{ userSelect: "none" }}
           >
             URBANIZ-E
           </Typography>
@@ -45,7 +46,12 @@ const Footer = () => {
           </div>
         </Box>
         <Box>
-          <Typography variant="h4" fontWeight="bold" mb="30px">
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            mb="30px"
+            style={{ userSelect: "none" }}
+          >
             About Us
           </Typography>
           <Typography
@@ -237,12 +243,17 @@ const Footer = () => {
           />
         </Box>
         <Box>
-          <Typography variant="h4" fontWeight="bold" mb="30px">
-            Costumer Care
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            mb="30px"
+            style={{ userSelect: "none" }}
+          >
+            Customer Care
           </Typography>
           <Typography
             mb="30px"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", userSelect: "none" }}
             onClick={() => setOpenDialog4(true)}
           >
             FAQ
@@ -379,7 +390,12 @@ const Footer = () => {
           />
         </Box>
         <Box width="clamp(20%, 25%, 30%)">
-          <Typography variant="h4" fontWeight="bold" mb="30px">
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            mb="30px"
+            style={{ userSelect: "none" }}
+          >
             Contact Us
           </Typography>
           <Typography mb="30px">

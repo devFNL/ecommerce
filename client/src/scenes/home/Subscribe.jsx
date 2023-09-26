@@ -19,8 +19,10 @@ const Subscribe = () => {
       <IconButton>
         <MarkEmailReadOutlinedIcon fontSize="large" />
       </IconButton>
-      <Typography variant="h3">Subscribe to our Newsletter</Typography>
-      <Typography>
+      <Typography variant="h3" sx={{ userSelect: "none" }}>
+        Subscribe to our Newsletter
+      </Typography>
+      <Typography sx={{ userSelect: "none" }}>
         and receive $20 coupon for your first order when you checkout
       </Typography>
       <Box
@@ -45,6 +47,7 @@ const Subscribe = () => {
           sx={{
             p: "10px",
             cursor: "pointer",
+            userSelect: "none",
           }}
           onClick={handleSubscribeClick}
         >

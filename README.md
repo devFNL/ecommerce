@@ -25,12 +25,11 @@ A modern and stylish e-commerce platform specializing in urban clothing, . It's 
 
 ## Screenshots 
 
-![Mesa de trabajo 1](https://github.com/devFNL/ecommerce/assets/127357394/4ea98292-dedb-46ae-81ba-a56f58e69524)
-![Mesa de trabajo 2](https://github.com/devFNL/ecommerce/assets/127357394/da9e548a-b386-4b66-8733-906dc0cf903a)
-![Mesa de trabajo 3](https://github.com/devFNL/ecommerce/assets/127357394/cf87afd4-3018-4382-8e42-15f89f04e7d2)
-![Mesa de trabajo 4](https://github.com/devFNL/ecommerce/assets/127357394/c9ad2c43-f8e0-4eb1-aaf6-4a56924e6ee5)
-![Mesa de trabajo 5](https://github.com/devFNL/ecommerce/assets/127357394/5fb523e3-6716-4e73-8212-c8a2e5aebd0d)
-![Mesa de trabajo 6](https://github.com/devFNL/ecommerce/assets/127357394/d203bc0b-dad5-4aed-ab6a-db8910d7064d)
+![Mesa de trabajo 1](https://github.com/devFNL/ecommerce/assets/127357394/1aa08c54-81df-41c3-9e22-c914971047b7)
+![Mesa de trabajo 2](https://github.com/devFNL/ecommerce/assets/127357394/ac9ccbc1-b3a7-45b1-80d7-23ba8000602c)
+![Mesa de trabajo 3](https://github.com/devFNL/ecommerce/assets/127357394/e120819e-345e-47ad-8ee7-ee483854b80e)
+![Mesa de trabajo 4](https://github.com/devFNL/ecommerce/assets/127357394/2df9cf0b-fe64-4014-af51-ea0b7be17146)
+![Mesa de trabajo 5](https://github.com/devFNL/ecommerce/assets/127357394/6179f2d2-3c5c-4f64-8376-8083a07253f5)
 
 
 

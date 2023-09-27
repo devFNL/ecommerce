@@ -34,3 +34,17 @@ html::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5rem;
 }
+
+.input-wrapper input {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  width: 9em;
+  color: black;
+  cursor: pointer;
+}
+
+.input-wrapper input:focus {
+  outline-color: #d6001c;
+}

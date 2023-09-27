@@ -253,7 +253,7 @@ const Footer = () => {
           </Typography>
           <Typography
             mb="30px"
-            style={{ cursor: "pointer", userSelect: "none" }}
+            style={{ cursor: "pointer" }}
             onClick={() => setOpenDialog4(true)}
           >
             FAQ

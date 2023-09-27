@@ -9,11 +9,34 @@ import {
 import { useNavigate } from "react-router-dom";
 import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
+import { useState } from "react";
+import CustomDialog from "./CustomDialog";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
+
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const [searchValue, setSearchValue] = useState("");
+
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const handleSearchKeyDown = (event) => {
+    if (event.key === "Enter") {
+      setIsDialogOpen(true);
+    }
+  };
+
+  const openSearchBar = () => {
+    setIsSearchOpen(true);
+  };
+
+  const closeSearchBar = () => {
+    setIsSearchOpen(false);
+    setSearchValue("");
+  };
 
   return (
     <Box
@@ -46,20 +69,41 @@ const Navbar = () => {
         </Box>
         <Box
           display={"flex"}
+          alignItems={"center"}
           justifyContent={"space-between"}
           columnGap={"20px"}
           zIndex={"2"}
         >
-          <IconButton sx={{ color: "black" }}>
+          {isSearchOpen ? (
+            <div class="input-wrapper">
+              <input
+                type="text"
+                placeholder="find a product..."
+                name="text"
+                className="input"
+                onKeyDown={handleSearchKeyDown}
+              />
+            </div>
+          ) : null}
+          <IconButton
+            sx={{ color: "black" }}
+            onClick={isSearchOpen ? closeSearchBar : openSearchBar}
+          >
             <a>
               <SearchOutlined />
             </a>
           </IconButton>
-          <IconButton sx={{ color: "black" }}>
+          <CustomDialog
+            open={isDialogOpen}
+            onClose={() => setIsDialogOpen(false)}
+            title="Search Results: "
+            content={<p>-- Results Here --</p>}
+          />
+          {/* <IconButton sx={{ color: "black" }}>
             <a>
               <PersonOutline />
             </a>
-          </IconButton>
+          </IconButton> */}
           <Badge
             badgeContent={cart.length}
             color={"secondary"}

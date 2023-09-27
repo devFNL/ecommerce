@@ -18,16 +18,8 @@ const Navbar = () => {
   const cart = useSelector((state) => state.cart.cart);
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   const [searchValue, setSearchValue] = useState("");
-
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const handleSearchKeyDown = (event) => {
-    if (event.key === "Enter") {
-      setIsDialogOpen(true);
-    }
-  };
 
   const openSearchBar = () => {
     setIsSearchOpen(true);
@@ -36,6 +28,11 @@ const Navbar = () => {
   const closeSearchBar = () => {
     setIsSearchOpen(false);
     setSearchValue("");
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    setIsDialogOpen(true);
   };
 
   return (
@@ -75,15 +72,19 @@ const Navbar = () => {
           zIndex={"2"}
         >
           {isSearchOpen ? (
-            <div class="input-wrapper">
-              <input
-                type="text"
-                placeholder="find a product..."
-                name="text"
-                className="input"
-                onKeyDown={handleSearchKeyDown}
-              />
-            </div>
+            <form onSubmit={handleSearchSubmit}>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  placeholder="find a product..."
+                  name="text"
+                  className="input"
+                  value={searchValue}
+                  onChange={(e) => setSearchValue(e.target.value)}
+                />
+              </div>
+              <button type="submit" style={{ display: "none" }} />
+            </form>
           ) : null}
           <IconButton
             sx={{ color: "black" }}
